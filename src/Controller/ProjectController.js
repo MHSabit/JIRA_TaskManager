@@ -1,9 +1,6 @@
 const ProjectModel = require("../Schema/ProjectSchema");
 const ProjectController = {};
 
-
-
-
 ProjectController.CreateProject = async(req, res) => {
     console.log(req.body);
     const findProject = await ProjectModel.findOne({projectName: req.body.projectName});
