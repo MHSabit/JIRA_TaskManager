@@ -9,6 +9,4 @@ const projectRouter = express.Router();
 // create a project
 projectRouter.post('/', ProjectController.CreateProject);
 
-
-
 module.exports = projectRouter;
