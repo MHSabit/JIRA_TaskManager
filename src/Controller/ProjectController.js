@@ -21,4 +21,12 @@ ProjectController.CreateProject = async(req, res) => {
     }
 }
 
+ProjectController.getAllProjects = async(req, res) => {
+    const allProjects = await ProjectModel.find();
+    res.status(200).json({
+        message: 'All Projects',
+        allProjects
+    });
+}
+
 module.exports = ProjectController;
