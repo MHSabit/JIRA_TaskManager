@@ -20,7 +20,11 @@ const ProjectSchema = mongoose.Schema({
         required: false,
         default: 'Low'
     },
-    TicketID : [{
+    assaginedUser : [{
+        type : Array,
+        default: []
+    }],
+    ticketID : [{
         type : Array,
         default: [1,2,3,4,5,6,7]
     }]

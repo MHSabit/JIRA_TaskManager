@@ -32,7 +32,7 @@ SignInUtility.signIn = async (req, res) => {
 },
 
 SignInUtility.generateAccessToken = async (req, res) => {
-    
+    res.send('generate access token');
 }
 
 module.exports = SignInUtility;

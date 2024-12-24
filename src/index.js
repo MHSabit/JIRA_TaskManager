@@ -4,6 +4,9 @@ const dotenv = require('dotenv');
 // require Route
 const userRouter = require('./Routes/User');
 const ProjectRouter = require('./Routes/Project');
+const ticketRouter = require('./Routes/Ticket');
+
+
 const connectDB = require('./configDB');
 
 connectDB();
@@ -19,7 +22,7 @@ app.get('/', (req, res) => {
 // Routes
 app.use('/user', userRouter);
 app.use('/projects', ProjectRouter);
-
+app.use('/tickets', ticketRouter);
 
 app.listen(process.env.APP_PORT, () => {
   console.log(`Server is running on port ${process.env.APP_PORT}`);
